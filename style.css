@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Major+Mono+Display&family=Xanh+Mono&display=swap');
+
+body {
+  font-family: Xanh Mono;
+  font-size: 18px;
+  line-height: 1.5;
+
+  background-color: #19151a;
+  color: #8cb2d5;
+  margin: 20px 30px 20px 30px; /*40px auto 40px auto;*/
+  overflow: hidden;
+}
+
+header {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #19151a;
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: hidden; /* Enable scrolling if the sidenav has too much content */
+
+  font-family: Major Mono Display;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.header-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-family: Major Mono Display;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.ledge-section h1 {
+  margin: 0;
+}
+h2 {
+  font-family: IBM Plex Mono;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+header ul {
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+}
+
+.socials li {
+  display: flex;
+}
+
+.skills-rundown-categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.skills-rundown ul {
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+}
+.skills-rundown li {
+  writing-mode: horizontal-tb;
+  display: inline;
+}
+
+.socials > ul > li {
+  justify-content: flex-end;
+}
+
+a {
+  color: #8cb2d5;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+li a {
+  display: block;
+  padding: 8px 16px 8px 16px;
+}
+
+.contact-instructions a {
+  color: #d0d9ef;
+}
+
+a:hover,
+a.active,
+.ledge-section:hover h1 {
+  color: #ffea9e;
+}
+
+li:hover a,
+li:hover svg {
+  color: #e9915d;
+}
+
+.scrollable-page {
+  width: 75%;
+  margin-left: 20%;
+  margin: 0 0 0 20%;
+  padding: 1px 16px 1px 16px;
+}
+
+.ledge-section {
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #e9915d;
+
+  padding: 28px 0 28px 0;
+  transition: height 3s, color 0.3s;
+}
+
+.ledge-section:hover {
+  /*height: 300px;*/
+}
+
+.hidden-section {
+  visibility: hidden;
+  height: 0px;
+  transition: height 0.5s;
+}
+
+.ledge-section:hover .hidden-section {
+  visibility: visible;
+  height: 256px;
+}
+
+.about-description{
+    display: flex;
+  	flex-direction: row;
+  margin: auto auto 32px auto;
+}
+
+.about-description img{
+  max-width: 35%;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+.flex-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contact-form-intro {
+  display: flex;
+  vertical-align: middle;
+}
+
+svg {
+  color: #8cb2d5;
+  transition: color 0.3s;
+  align-self: center;
+  vertical-align: middle;
+}
+
+.contact-form-intro svg {
+  margin: 2% 0 0 1%;
+}
+
+.contact-flexbox {
+  display: flex;
+  justify-content: flex-start;
+}
+
+form {
+  margin: 0 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+input,
+textarea {
+  background-color: #19151a;
+  color: #d0d9ef;
+  border: 2px dashed #8cb2d5;
+  border-radius: 5%;
+  width: 500px;
+}
+
+button {
+  background-color: #19151a;
+  color: #ffea9e;
+  border: 1px solid #ffea9e;
+  border-radius: 5%;
+  font-size: 24px;
+  font-family: IBM Plex Mono;
+  padding: 8px 16px 8px 16px;
+  margin: 16px 0 0 0;
+  transition: color 0.3s, border 0.3s;
+}
+
+button:hover {
+  color: #e9915d;
+  border-color: #e9915d;
+}
+.btn {
+  text-align: right;
+}
+
+.art img {
+  float: left;
+  /*width: 100%;*/
+  height: 100%;
+  object-fit: cover;
+}
+span.major-mono {
+  font-family: Major Mono Display;
+}
+
+span.yellow {
+  color: #ffea9e;
+}
+
+span.orange {
+  color: #e9915d;
+}
+span.light-blue {
+  color: #d0d9ef;
+}
