@@ -12,7 +12,6 @@ body {
 }
 
 header {
-  list-style-type: none;
   margin: 0;
   padding: 0;
   width: 15%;
@@ -51,6 +50,7 @@ h2 {
 header ul {
   writing-mode: vertical-lr;
   text-orientation: sideways;
+  list-style-type: none;
 }
 
 .socials li {
@@ -118,9 +118,6 @@ li:hover svg {
   transition: height 3s, color 0.3s;
 }
 
-.ledge-section:hover {
-  /*height: 300px;*/
-}
 
 .hidden-section {
   visibility: hidden;
@@ -150,6 +147,11 @@ li:hover svg {
   flex-direction: row;
   justify-content: space-between;
 }
+
+.music.flex-layout{
+  flex-direction:column;
+}
+
 .contact-form-intro {
   display: flex;
   vertical-align: middle;
