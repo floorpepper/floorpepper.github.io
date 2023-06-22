@@ -60,8 +60,8 @@ const albums = [
             ]
     },
     {
-        name: "Fantasy",
-        album_art: "",
+        name: "Lions Meet Here",
+        album_art: "https://cdn.discordapp.com/attachments/804782490937851945/1121244616168063006/fantasy-album-art.png",
         tracks:
             [
                 "Chariot_Canon",
@@ -72,20 +72,6 @@ const albums = [
     }
 ];
 
-// Define the list of tracks that have to be played
-// const track_names = [
-//     ["Campus_Stellae_Overture", space_album_art_link],
-//     ["BattleStrife_Theme", pirate_album_art_link],
-//     ["Ship_Themes", pirate_album_art_link],
-//     ["Tavern_Theme", pirate_album_art_link],
-//     ["Atrium_Death", gothic_album_art_link],
-//     ["Next_Door", gothic_album_art_link],
-//     ["Tower_Variation", gothic_album_art_link],
-//     ["Quest_Begins", fantasy_album_art_link],
-//     ["Chariot_Canon", fantasy_album_art_link],
-//     ["Happy_End", fantasy_album_art_link],
-//     ["Inevitable_Water_Level", fantasy_album_art_link],
-// ];
 
 let track_list = [];
 
