@@ -10,7 +10,7 @@ body {
     .player {
     height: 75vh;
     display: flex;
-    align-items: center;
+    align-items: center; /*STICKS TO CENTER OF PAGE*/
     flex-direction: column;
     justify-content: center;
     }
@@ -25,8 +25,8 @@ body {
     
     .track-art {
     margin: 12px;
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     background-image: URL(
         "https://source.unsplash.com/Qrspubmx6kE/640x360");
     background-size: cover;
@@ -74,7 +74,7 @@ body {
     
     /* Define the slider width so that it scales properly */
     .slider_container {
-    width: 55%;
+    width: 100%;
     max-width: 400px;
     display: flex;
     justify-content: center;

@@ -8,7 +8,7 @@ body {
   background-color: #19151a;
   color: #8cb2d5;
   margin: 20px 30px 20px 30px; /*40px auto 40px auto;*/
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 header {
@@ -118,14 +118,18 @@ li:hover svg {
   transition: height 3s, color 0.3s;
 }
 
-
 .hidden-section {
   visibility: hidden;
   height: 0px;
   transition: height 0.5s;
 }
 
-.ledge-section:hover .hidden-section {
+/* .ledge-section:hover .hidden-section {
+  visibility: visible;
+  height: 256px;
+} */
+
+.show .hidden-section{
   visibility: visible;
   height: 256px;
 }
@@ -147,11 +151,30 @@ li:hover svg {
   flex-direction: row;
   justify-content: space-between;
 }
-
-.music.flex-layout{
-  flex-direction:column;
+.player-and-playlist {
+  background-color:#19151a;
+  z-index:1;
 }
 
+.playlist {
+  overflow-y:scroll;
+  height: 500px;
+}
+
+.playlist div{
+  justify-content: left;
+  margin: 20px 10px 20px 10;
+}
+
+.playlist div img {
+  border-radius: 5%;
+  width: 20%;
+  object-fit: cover;
+}
+
+.playlist div div ul{
+  list-style-type:decimal;
+}
 .contact-form-intro {
   display: flex;
   vertical-align: middle;
@@ -228,4 +251,24 @@ span.orange {
 }
 span.light-blue {
   color: #d0d9ef;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8cb2d5; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d0d9ef
 }
