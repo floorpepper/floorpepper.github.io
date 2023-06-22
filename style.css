@@ -168,7 +168,8 @@ li:hover svg {
 
 .playlist div img {
   border-radius: 5%;
-  width: 20%;
+  max-width: 15%;
+  max-height: 15%; /*if object-fit removed, this unneeded*/
   object-fit: cover;
 }
 

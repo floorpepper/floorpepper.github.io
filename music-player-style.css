@@ -25,8 +25,8 @@ body {
     
     .track-art {
     margin: 12px;
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     background-image: URL(
         "https://source.unsplash.com/Qrspubmx6kE/640x360");
     background-size: cover;

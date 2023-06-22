@@ -1,6 +1,31 @@
-function dropdown(artOrMusic){
+
+/*LOAD ASSETS*/
+window.onload = function () {
+    var folder = "assets/artwork";
+
+    // const express = require('express');
+    // const app = express();
+    // const path = require('path');
+
+    // // Allow assets directory listings
+    // const serveIndex = require('serve-index');
+    // app.use('/assets', serveIndex(path.join(__dirname, '/assets')));
+
+    $.ajax({
+        url: folder,
+        success: function (data) {
+            $(data).find("a").attr("href", function (i, val) {
+                if (val.match(/\.(jpe?g|png|gif)$/)) {
+                    $("body").append("<img src='" + folder + val + "'>");
+                }
+            });
+        }
+    });
+}
+
+function dropdown(artOrMusic) {
     var dropdowns = document.getElementsByClassName("dropdown");
-    if(!dropdowns[artOrMusic].classList.contains("show")){
+    if (!dropdowns[artOrMusic].classList.contains("show")) {
         dropdowns[0].classList.toggle("show");
         dropdowns[1].classList.toggle("show");
     }
@@ -79,7 +104,6 @@ let track_list = [];
 //update: need to add node.js for this.
 
 for (let i = 0; i < albums.length; i++) {
-    console.log("i: " + i);
     var curr_album_div = document.createElement('div');
     var curr_album_name = document.createElement('h2');
     var curr_album_art = document.createElement('img');
@@ -96,8 +120,7 @@ for (let i = 0; i < albums.length; i++) {
     curr_album_subdiv.appendChild(curr_album_name);
     curr_album_subdiv.appendChild(curr_album_tracks);
 
-    for(let j = 0; j < albums[i].tracks.length; j++){
-        console.log("j: " + j);
+    for (let j = 0; j < albums[i].tracks.length; j++) {
         var track_name_formatted = albums[i].tracks[j].replace(/_|-/g, " ");
         track_list.push({
             name: track_name_formatted,
@@ -180,6 +203,9 @@ function nextTrack() {
 }
 
 function playpauseTrack() {
+    if(currentMinutes == 0 && currentMinutes == 0) { 
+        isPlaying = !isPlaying; 
+    }
     isPlaying ? curr_track.pause() : curr_track.play();
     isPlaying = !isPlaying;
 }
@@ -223,6 +249,9 @@ function seekUpdate() {
         // Display the updated duration
         curr_time.textContent = currentMinutes + ":" + currentSeconds;
         total_duration.textContent = durationMinutes + ":" + durationSeconds;
+
+        
+        if(currentMinutes == 0 && currentMinutes == 0) { loadTrack(track_index); }
     }
 }
 
