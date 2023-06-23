@@ -1,7 +1,7 @@
 
 /*LOAD ASSETS*/
 window.onload = function () {
-    var folder = "assets/artwork";
+    var folder = "assets/artwork/";
 
     // const express = require('express');
     // const app = express();
@@ -16,11 +16,17 @@ window.onload = function () {
         success: function (data) {
             $(data).find("a").attr("href", function (i, val) {
                 if (val.match(/\.(jpe?g|png|gif)$/)) {
-                    $("body").append("<img src='" + folder + val + "'>");
+                    //get <section class="art flex-layout hidden-section shuffle-me">
+                    $(".art.flex-layout.hidden-section.shuffle-me").append(
+                        "<a href=\"" + val + "\" target=\"_blank\"><img src='" +  val + "'></a>");
                 }
             });
         }
     });
+
+    document.addEventListener("mousemove", e=> {
+        
+    })
 }
 
 function dropdown(artOrMusic) {
@@ -76,7 +82,7 @@ const albums = [
     },
     {
         name: "Gothic",
-        album_art: "https://images.unsplash.com/photo-1619904252549-88d890e7455b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+        album_art: "https://cdn.discordapp.com/attachments/735971496480210975/1121572421997170738/gothic-album-art.png",
         tracks:
             [
                 "Atrium_Death",
@@ -203,9 +209,6 @@ function nextTrack() {
 }
 
 function playpauseTrack() {
-    if(currentMinutes == 0 && currentMinutes == 0) { 
-        isPlaying = !isPlaying; 
-    }
     isPlaying ? curr_track.pause() : curr_track.play();
     isPlaying = !isPlaying;
 }
@@ -250,8 +253,7 @@ function seekUpdate() {
         curr_time.textContent = currentMinutes + ":" + currentSeconds;
         total_duration.textContent = durationMinutes + ":" + durationSeconds;
 
-        
-        if(currentMinutes == 0 && currentMinutes == 0) { loadTrack(track_index); }
+        if(curr_track.currentTime == curr_track.duration) { loadTrack(track_index); }
     }
 }
 

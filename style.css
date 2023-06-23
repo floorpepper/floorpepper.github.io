@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  margin: 0;
+  margin: 5px 5px 5px 5px;
   padding: 0;
   width: 15%;
   background-color: #19151a;
@@ -23,6 +23,8 @@ header {
   font-family: Major Mono Display;
   font-size: 20px;
   line-height: 1.5;
+  display:flex;
+  flex-direction: column;
 }
 
 .header-links {
@@ -32,6 +34,9 @@ header {
   justify-content: space-between;
 }
 
+.header img {
+  max-width: 80%;
+}
 h1 {
   font-family: Major Mono Display;
   font-size: 24px;
@@ -167,10 +172,10 @@ li:hover svg {
 }
 
 .playlist div img {
-  border-radius: 5%;
-  max-width: 15%;
-  max-height: 15%; /*if object-fit removed, this unneeded*/
-  object-fit: cover;
+  margin: 5px 5px 5px 5px;
+  border-radius: 10%;
+  max-width: 25%;
+  object-fit: contain;
 }
 
 .playlist div div ul{
@@ -233,6 +238,10 @@ button:hover {
   text-align: right;
 }
 
+.art.hidden-section {
+  overflow-y:scroll;
+}
+
 .art img {
   float: left;
   /*width: 100%;*/
@@ -256,7 +265,8 @@ span.light-blue {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width:5px;
+  height:5px
 }
 
 /* Track */
