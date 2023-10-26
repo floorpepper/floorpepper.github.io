@@ -35,8 +35,44 @@ function dropdown(artOrMusic) {
         dropdowns[0].classList.toggle("show");
         dropdowns[1].classList.toggle("show");
     }
-
 }
+
+function dropdown2() {
+    var dropdown_menu = document.getElementByClassName("dropdown");
+    if (!dropdown_menu.contains("show")) {
+        dropdown_menu.toggle("show");
+    }
+}
+
+/*GSAP STUFF*/
+/*
+//get all photos in Art
+const races = document.querySelectorAll(".art.flex-layout.hidden-section.shuffle-me");
+console.log(races.offsetWidth)
+
+function getScrollAmount() {
+	let racesWidth = races.scrollWidth;
+	return -(racesWidth - window.innerWidth);
+}
+
+const tween = gsap.to(races, {
+	x: getScrollAmount,
+	duration: 3,
+	ease: "none",
+});
+
+
+ScrollTrigger.create({
+	trigger:".art.ledge-section.dropdown.show",
+	start:"top 20%",
+	end: () => `+=${getScrollAmount() * -1}`,
+	pin:true,
+	animation:tween,
+	scrub:1,
+	invalidateOnRefresh:true,
+	markers:true
+})
+*/
 /*MUSIC PLAYER FUNCTIONS*/
 
 // Select all the elements in the HTML page

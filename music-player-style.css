@@ -25,13 +25,13 @@ body {
     
     .track-art {
     margin: 12px;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     background-image: URL(
         "https://source.unsplash.com/Qrspubmx6kE/640x360");
     background-size: cover;
     background-position: center;
-    border-radius: 5%;
+    border-radius: .5%;
     }
     
     /* Changing the font sizes to suitable ones */
